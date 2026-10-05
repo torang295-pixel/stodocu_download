@@ -18,19 +18,6 @@
 
 ## 🚀 Hướng dẫn cài đặt
 
-### Cách 1: Cài đặt nhanh bằng script (Khuyên dùng trên Windows)
-
-1. Nhấp đúp chuột vào file **`cai_dat_nhanh.bat`** trong thư mục dự án.
-2. File script sẽ tự động copy đường dẫn thư mục `extension` vào bộ nhớ tạm (Clipboard) và mở trang `chrome://extensions`.
-3. Trên trình duyệt Chrome:
-   - Bật công tắc **Chế độ cho nhà phát triển (Developer mode)** ở góc trên bên phải.
-   - Bấm **Tải tiện ích đã giải nén (Load unpacked)**.
-   - Nhấn `Ctrl + V` vào ô chọn thư mục rồi bấm **Select Folder / Enter**.
-
----
-
-### Cách 2: Cài đặt thủ công
-
 1. Tải file **`studocu-helper-v2.1.zip`** từ mục [Releases](https://github.com) hoặc clone repository này về máy.
 2. Giải nén file `.zip` (nếu tải zip).
 3. Mở trình duyệt Chrome và truy cập: `chrome://extensions`.
