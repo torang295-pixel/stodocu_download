@@ -39,25 +39,6 @@
    - Sau khi in xong hoặc bấm Hủy, trang web tự động trở về giao diện bình thường mà không cần tải lại.
 4. **Bypass thủ công:**
    - Nếu gặp trang bị kẹt hạn mức cũ, bấm **Bypass & Tải lại** để xóa sạch cookie và reload trang ngay lập tức.
-
----
-
-## 📁 Cấu trúc thư mục
-
-```text
-studocu/
-├── extension/                  # Mã nguồn tiện ích mở rộng Chrome
-│   ├── manifest.json           # Cấu hình Manifest V3
-│   ├── background.js           # Service worker quản lý cookie và điều hướng
-│   ├── content.js              # Script giao diện nổi và xử lý trích xuất PDF
-│   ├── content.css             # CSS bảng điều khiển và định dạng trang in PDF
-│   └── custom_style.css        # CSS chống làm mờ và ẩn lớp phủ paywall
-├── cai_dat_nhanh.bat           # Script 1-click copy đường dẫn & mở chrome://extensions
-├── studocu-helper-v2.1.zip     # Gói bản phát hành v2.1
-├── test_extension.js           # Kịch bản tự kiểm tra tính hợp lệ của tiện ích
-└── README.md                   # Tài liệu hướng dẫn sử dụng và cài đặt
-```
-
 ---
 
 ## ⚠️ Lưu ý miễn trừ trách nhiệm
