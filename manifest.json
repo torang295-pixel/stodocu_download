@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Studocu Helper",
+  "version": "2.2",
+  "description": "Tự động bypass paywall và xuất file PDF sạch từ Studocu",
+  "permissions": [
+    "cookies",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.studocu.com/*",
+    "*://*.studocu.vn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Bật/Tắt Studocu Helper"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.studocu.com/*",
+        "*://*.studocu.vn/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css", "custom_style.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

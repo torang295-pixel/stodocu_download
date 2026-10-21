@@ -1,0 +1,81 @@
+/* Bỏ chặn cuộn và mở khóa copy văn bản */
+html, body {
+  overflow: auto !important;
+  height: auto !important;
+}
+
+body, .pf, .pc, #document-wrapper, .page-content, span, p, div {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Gỡ bỏ toàn bộ hiệu ứng làm mờ, mask và clip-path */
+[class*="blur"],
+[class*="Blur"],
+.blurred-page,
+.blurred-container,
+div[class*="wrapper-blur"],
+[class*="blurred-image-wrapper"],
+[class*="BlurredImage"] {
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+/* Triệt tiêu các lớp phủ bóng mờ giả (pseudo-elements) trên trang */
+.pf::before,
+.pf::after,
+.page-content::before,
+.page-content::after,
+[class*="blur"]::before,
+[class*="blur"]::after,
+[class*="Blur"]::before,
+[class*="Blur"]::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Ẩn các lớp phủ paywall, quảng cáo, popup */
+#upgrade-overlay,
+.banner-wrapper,
+.advertisement,
+[class*="paywall"],
+[class*="Paywall"],
+[class*="premium"],
+[class*="Premium"],
+[class*="unlock"],
+[class*="Unlock"],
+#page-container-wrapper + div,
+div[class*="paywall-wrapper"],
+[class*="Viewer_document"] [class*="overlay"],
+[class*="Viewer_document"] [class*="Overlay"],
+#viewer-wrapper [class*="overlay"],
+#viewer-wrapper [class*="Overlay"] {
+  display: none !important;
+  z-index: -9999 !important;
+  backdrop-filter: none !important;
+}
+
+/* Đảm bảo nội dung tài liệu và ảnh gốc luôn hiển thị sắc nét */
+.pf, .pc, #document-wrapper, .page-content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+.pf img,
+.page-content img,
+img.bi {
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
